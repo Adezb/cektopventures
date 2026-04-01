@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, LockKeyhole, Users } from "lucide-react";
+import { ArrowUpRight, Database, Network } from "lucide-react";
 
 export function FeaturedProduct() {
   return (
@@ -28,18 +28,19 @@ export function FeaturedProduct() {
                   ROT8
                 </p>
                 <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
-                  Digital Cooperative Platform
+                  Digital Social Commerce Utility
                 </p>
               </div>
             </div>
             <h2 className="mt-4 font-heading text-3xl font-bold sm:text-4xl">
-              ROT8 powers secure digital cooperative and group savings experiences.
+              ROT8 is a digital social commerce utility for automated contribution tracking.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-              ROT8 is our flagship fintech product for the Nigerian market,
-              designed to help cooperatives, savings groups, and member-based
-              communities manage contributions with clarity, trust, and digital
-              convenience.
+              ROT8 is our flagship SaaS product for the Nigerian market,
+              designed to help associations, teams, and member-based
+              communities coordinate digital contributions, maintain a
+              community contribution ledger, and support collaborative
+              purchasing workflows with clarity and convenience.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -64,27 +65,28 @@ export function FeaturedProduct() {
           <div className="grid gap-4">
             <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
               <div className="inline-flex rounded-2xl bg-brand-sky/15 p-3 text-brand-sky">
-                <LockKeyhole size={24} />
+                <Database size={24} />
               </div>
               <h3 className="mt-4 font-heading text-xl font-bold">
-                Secure contribution workflows
+                Automated contribution tracking
               </h3>
               <p className="mt-3 text-base leading-7 text-slate-300">
-                Built to support trust, accountability, and controlled access in
-                member-driven savings operations.
+                Built to support clear records, controlled access, and reliable
+                digital contribution workflows for coordinators and participants.
               </p>
             </div>
 
             <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
               <div className="inline-flex rounded-2xl bg-brand-sky/15 p-3 text-brand-sky">
-                <Users size={24} />
+                <Network size={24} />
               </div>
               <h3 className="mt-4 font-heading text-xl font-bold">
-                Designed for cooperative communities
+                Built for group coordination
               </h3>
               <p className="mt-3 text-base leading-7 text-slate-300">
                 ROT8 supports digital experiences that make member coordination,
-                participation, and financial visibility more seamless.
+                participation tracking, service visibility, and collaborative
+                purchasing more seamless.
               </p>
             </div>
           </div>

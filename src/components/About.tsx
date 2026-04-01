@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BriefcaseBusiness, Cpu, Landmark } from "lucide-react";
+import { BriefcaseBusiness, Cpu, Network } from "lucide-react";
 
 const points = [
   {
@@ -15,10 +15,10 @@ const points = [
       "Every engagement is shaped around operational efficiency, stronger customer experiences, and scalable digital capability.",
   },
   {
-    icon: Landmark,
-    title: "Built for evolving markets",
+    icon: Network,
+    title: "Built for connected markets",
     description:
-      "We serve organizations that need dependable software, advisory support, and modern technology services suited to ambitious markets like Nigeria.",
+      "We serve organizations that need dependable software, advisory support, and modern technology infrastructure suited to ambitious markets like Nigeria.",
   },
 ];
 

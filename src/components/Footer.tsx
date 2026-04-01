@@ -21,6 +21,11 @@ export function Footer() {
             Building modern software, dependable IT services, and digital
             solutions that help businesses move with clarity and confidence.
           </p>
+          <p className="mt-4 max-w-xl text-sm leading-7 text-brand-slate">
+            CEK TOP VENTURES LTD is a registered technology firm (RC: 1928419).
+            We are a Software-as-a-Service (SaaS) provider and do not offer
+            banking, investment, or regulated financial services.
+          </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {footerLinks.map((link) => (
               <Link
