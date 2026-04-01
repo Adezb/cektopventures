@@ -1,8 +1,9 @@
 import { Mail, MapPin, MessageCircleMore, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const footerLinks = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
 ];
 
 export function Footer() {
@@ -22,13 +23,13 @@ export function Footer() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {footerLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-brand-navy transition hover:border-sky-200 hover:text-sky-700"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

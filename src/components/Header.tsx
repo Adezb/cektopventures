@@ -1,16 +1,23 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "IT Services", href: "#services" },
-  { label: "Our Products", href: "#products" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#home", route: "/#home" },
+  { label: "About Us", href: "#about", route: "/#about" },
+  { label: "IT Services", href: "#services", route: "/#services" },
+  { label: "Our Products", href: "#products", route: "/#products" },
+  { label: "Contact", href: "#contact", route: "/#contact" },
 ];
+
+const WHATSAPP_URL = "https://wa.me/2348022485204";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const getNavHref = (href: string, route: string) =>
+    location.pathname === "/" ? href : route;
 
   useEffect(() => {
     const closeMenu = () => setMenuOpen(false);
@@ -23,7 +30,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-navy/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a
-          href="#home"
+          href={location.pathname === "/" ? "#home" : "/#home"}
           className="flex max-w-[16rem] items-center gap-3 text-white sm:max-w-none"
         >
           <span
@@ -41,14 +48,16 @@ export function Header() {
           {navItems.map((item) => (
             <a
               key={item.href}
-              href={item.href}
+              href={getNavHref(item.href, item.route)}
               className="text-sm font-semibold text-slate-200 transition hover:text-brand-sky"
             >
               {item.label}
             </a>
           ))}
           <a
-            href="#contact"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full bg-brand-sky px-5 py-3 text-sm font-bold text-brand-navy transition hover:bg-sky-300"
           >
             Start a Conversation
@@ -72,7 +81,7 @@ export function Header() {
             {navItems.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={getNavHref(item.href, item.route)}
                 className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-100 transition hover:bg-white/5 hover:text-brand-sky"
                 onClick={() => setMenuOpen(false)}
               >
@@ -80,7 +89,9 @@ export function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-2xl bg-brand-sky px-4 py-3 text-center text-sm font-bold text-brand-navy"
               onClick={() => setMenuOpen(false)}
             >
