@@ -37,7 +37,11 @@ export function Header() {
             className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/5 font-heading text-[0.65rem] font-bold uppercase tracking-[0.18em] text-brand-sky sm:h-[70px] sm:w-[70px]"
             aria-hidden="true"
           >
-            <img className="h-full w-full bg-white rounded-xl" src="/public/ctv-logo.png" alt="Logo" />
+            <img
+              className="h-full w-full rounded-xl bg-white object-contain"
+              src="/ctv-logo.png"
+              alt="CEK TOP VENTURES LTD logo"
+            />
           </span>
           <span className="font-heading text-lg font-bold uppercase tracking-[0.2em]">
             CEK TOP VENTURES LTD
