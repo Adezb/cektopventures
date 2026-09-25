@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { About } from "./components/About";
-import { FeaturedProduct } from "./components/FeaturedProduct";
+import { AuthorityProofBar } from "./components/AuthorityProofBar";
+import { CaseStudies } from "./components/CaseStudies";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { LeadCapture } from "./components/LeadCapture";
 import { Services } from "./components/Services";
 import { LegalPage } from "./pages/LegalPage";
 
@@ -22,9 +24,11 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <AuthorityProofBar />
       <About />
       <Services />
-      <FeaturedProduct />
+      <CaseStudies />
+      <LeadCapture />
     </>
   );
 }

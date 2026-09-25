@@ -9,7 +9,7 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer
-      id="contact"
+      id="footer-info"
       className="scroll-mt-24 border-t border-slate-200 bg-white"
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:px-8">
@@ -52,10 +52,10 @@ export function Footer() {
             <div>
               <p className="font-semibold text-brand-navy">Support Email</p>
               <a
-                href="mailto:support@cektopventures.com"
-                className="text-brand-slate transition hover:text-sky-700"
+                href="mailto:hello@cektopventures.com"
+                className="font-medium text-brand-slate transition hover:text-sky-700"
               >
-                cektopventures@gmail.com
+                hello@cektopventures.com
               </a>
             </div>
           </div>
